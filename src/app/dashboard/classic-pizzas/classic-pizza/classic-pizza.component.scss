@@ -1,0 +1,31 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .mybutton{
+    background-color: #EF5350;
+    color: white;
+    border-radius: 7px;
+    padding-top:1%;
+    padding-bottom:1%;
+
+    
+  }
+  .mybutton:hover{
+    background-color: #FF9F00;
+    border-radius: 7px;
+    padding-top:1%;
+    padding-bottom:1%;
+    cursor: pointer;
+
+    
+  }
+.image{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}

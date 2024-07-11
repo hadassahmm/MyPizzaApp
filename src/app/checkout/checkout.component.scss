@@ -1,0 +1,39 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #fff;
+    padding:10px;
+    padding-top: 0;
+    height: 100%;
+  }
+
+  .mybutton{
+    border: 1px solid #FF9F00;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #FF9F00(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #FF9F00;
+    padding:10px;
+    padding-top: 0;
+    height: 100%;
+    text-align: center;
+    color:black;
+    font-weight: 800;
+  }
+
+  .mybutton:hover{
+    border: 2px solid #FF9F00;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #FF9F00(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: white;
+    padding:10px;
+    padding-top: 0;
+    height: 100%;
+    text-align: center;
+    color:black;
+    font-weight: 800;
+    cursor: pointer;
+  }

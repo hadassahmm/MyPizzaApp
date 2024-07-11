@@ -1,0 +1,54 @@
+.maincontainer {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+    position: relative;
+} 
+
+.flex-container {
+    display: flex; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    /* height: 100vh;  Uncomment if you want full viewport height */
+}
+
+/* Define the keyframes for the horizontal movement */
+@keyframes move-horizontal {
+    0% { 
+        transform: translateX(-10); /* Start position */
+    }
+    100% {
+        transform: translateX(20vw); /* End position */
+    }
+}
+
+  .fix-stroke {
+     paint-order: stroke fill;
+    // font-size: 90px;
+    // background-color: aqua;
+     color: #D32F2F;
+    font-size: 90px !important; 
+    -webkit-text-stroke: 0.5vw black !important;
+    // font-style: none;
+    margin:0;
+      
+  }
+    .moving-image{
+        height: 50%;
+        animation: move-horizontal 5s linear infinite; /* Apply the animation */
+    
+    }
+    .inline-block {
+        display: inline-block;
+        margin-right: 10px; /* Adjust the spacing between items if needed */
+    }
+    
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        background-color: #fff;
+      }

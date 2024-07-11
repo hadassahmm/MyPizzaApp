@@ -1,0 +1,95 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #fff;
+    width: 12vw;
+  }
+
+  .cardGreen {
+    border: 2px solid green;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(46, 204, 113,0.2);
+    overflow: hidden;
+    background-color: green;
+    width: 12vw;
+    padding-top:10px;
+    padding-bottom:10px;
+    p{
+        color:white;
+        text-align: center;
+        line-height: 1.5vh;
+        margin-bottom: 0;
+    }
+  }
+
+  .cardRed {
+    border: 2px solid red;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255,0,0,0.2);
+    overflow: hidden;
+    background-color: #fff;
+    width: 12vw;
+    padding-top:10px;
+    padding-bottom:10px;
+    p{
+        text-align: center;
+        line-height: 1.5vh;
+        margin-bottom: 0;
+    }
+  }
+
+  .inline-block {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between items if needed */
+}
+
+.cardGreen:hover{
+    cursor: pointer;
+    background-color: green;
+    p{
+        color: white;
+    }
+}
+.cardRed:hover{
+    cursor: pointer;
+    background-color: green;
+    border: 2px solid green;
+
+    p{
+        color:white
+    }
+}
+.mybutton{
+
+    background-color: #EE534F;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.7em;
+    border-radius: 10px;
+    p{
+      color: white;
+      font-weight: 700;  
+    }
+}
+
+.mybutton:hover{
+
+    background-color: white;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.7em;
+    border-radius: 10px;
+    border: solid 3px #EE534F;
+    cursor: pointer;
+    p{
+      color: #EE534F;
+      font-weight: 700;  
+    }
+    
+}

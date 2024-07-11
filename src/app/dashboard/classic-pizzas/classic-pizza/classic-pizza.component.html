@@ -1,0 +1,52 @@
+
+
+
+
+  
+        
+
+                <div style="overflow: hidden;margin-bottom:2vh;padding-bottom:15px;text-align: center;" class="card">
+                    <div class="row">
+                        <div style="text-align: center;" class="col">
+                    <img class="image" [src]="pizza.imageURL">
+                        </div> 
+                        <div  class="col-sm-12">
+                           <div class="row" style="margin:0;padding:0;">
+                    <div class="col-xxl" >
+                        <div style="text-align: left;padding-top:7%;padding-bottom:0;margin-bottom:0;" class="row" >
+                            <div style="display: inline-block;" class="col">
+                            <p style="font-size: medium;padding-bottom:0;margin-bottom:5px;display: inline-block;" >{{pizza.pizzaName}}</p>
+            
+                                <mat-icon *ngIf="!pizza.isitVegetarian; else isVeg" ></mat-icon>
+                                <ng-template #isVeg >
+                                    <mat-icon  style="color: green;padding-top: 0.2em;" >eco</mat-icon>
+
+                                </ng-template>
+                       
+                        </div>
+                                    </div> 
+                                    <div style="text-align: left;padding-right:5px;margin-bottom:5px;" class="row" >
+                                        <div class="col">
+                                        <p style="font-size: x-small;color:gray;margin:0;line-height: normal;" >{{pizza.description}}</p>
+                                        </div>
+                                                </div>
+                                                <div style="text-align: left;" class="row" >
+                                                    <div class="col">
+                                                    <p style="font-size: medium;" >$ {{pizza.priceInDollars}}</p>
+                                                    </div>
+                                                            </div>
+                                                            <div style="text-align: center;" class="row" >
+                                                                <div class="col">
+                                                                <div class="mybutton">
+                                                                    ADD TO CART
+                                                                </div>
+                                                                </div>
+                                                                        </div>
+                                                          
+                    </div>
+                           </div>
+                    
+                                </div>
+                    </div>
+                    </div>
+            

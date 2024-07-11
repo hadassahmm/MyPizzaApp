@@ -1,0 +1,54 @@
+<div  class="maincontainer">
+        <div  style="padding:1.5vh 1.5vw 1.5vh 1.5vw;background-color: #FFE082;" class="row">
+            <div  class="col-lg-4 col-md-4 col-sm-4" >
+                <div  style="height: 15vh;justify-content: right;" class="flex-container">
+                    <img  height="100%;" src="images/logo.png" alt="Logo">
+                </div>
+            </div> 
+            <div style="height: 15vh; " class="col-lg-8 col-md-8 col-sm-8" >
+                <div  style="height: 15vh;justify-content: left; " class="flex-container">
+                    <h1 class="fix-stroke">
+                        PIZZA PAL
+                    </h1>  
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div style="padding-right: 0;" class="col-9">
+                <div class="row">
+    <div style="margin:10px;padding:0;margin-right:0;padding-left:2vw;" class="col-2">
+        <p style="font-weight: bold; font-size: large;">Pizza Choices:</p>
+    </div>
+    <div style="margin:10px;margin-left:-2vw;text-align: left;padding-top:2px;" class="col-9">
+        <div *ngFor="let p of pizza_choices" class="inline-block" >
+            <input 
+            type ="radio"
+            name="pizza_choice" 
+            [value] ="p.id"
+            [checked]="p.isselected"
+            (change)="pizzachoiceChanged(p.id)"
+            
+            />
+    
+            <span>&nbsp;{{p.name}}</span>
+        </div>
+        
+    </div>
+                </div>
+               
+                <div *ngIf="selected_pizza_choice===1" >
+                    <app-classic-pizzas style="overflow: auto;" ></app-classic-pizzas>
+                </div>
+                <div *ngIf="selected_pizza_choice===2">
+                    <app-custom-pizza></app-custom-pizza>
+                </div>
+            </div>
+            <div style="margin:0;padding-right:10px;padding-left:0;" class="col-3">
+
+                <app-checkout></app-checkout>
+    
+            </div>
+    
+        </div>
+    </div> 

@@ -1,208 +1,372 @@
-<div style="margin:0 1vw 0 1vw;overflow:auto;height: 70vh;" >
-    <div style="margin:1vh 1vw 1vh 1vw;" class="row" >
-        <div class="col-12" >
-            <div  class="row">
-        <div style="align-items: right;justify-content: right;text-align: left;padding-top:0.5em;padding-left:4vw;" class="col-3" >
-            <span style="font-weight: 600;" >Select Base: </span>
+<div style="margin: 0 1vw 0 1vw; overflow: auto; height: 70vh">
+  <div style="margin: 1vh 1vw 1vh 1vw" class="row">
+    <div class="col-12">
+      <div class="row">
+        <div
+          style="
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+            padding-top: 0.5em;
+            padding-left: 4vw;
+          "
+          class="col-3"
+        >
+          <span style="font-weight: 600">Select Base: </span>
         </div>
-        <div class="col-9" >
-            <div class="row">
-                <div style="padding:0;margin:0;align-items: center;justify-content: center;" class=" col-sm-3 col-md-3" *ngFor="let b of bases" >
-        <div style="overflow: hidden;margin-bottom:2vh;text-align: center;" (click)="changeOptionBase(b.id)" [ngClass]="b.isSelected? 'cardGreen':'cardRed'">
-        <div class="row">
-            <div  class="col-sm-12">
-               <div class="row" style="margin:0;padding:0;">
-        <div class="col-xxl" >
-            <div style="text-align: left;padding-bottom:0;margin-bottom:0;" class="row" >
-                <div class="col">
-                <p style="font-size: small;padding-bottom:0;margin-bottom:5px;" >{{b.name}}</p>
-                </div>
+        <div class="col-9">
+          <div class="row">
+            <div
+              style="
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+              "
+              class="col-sm-3 col-md-3"
+              *ngFor="let b of bases"
+            >
+              <div
+                style="overflow: hidden; margin-bottom: 2vh; text-align: center"
+                (click)="changeOptionBase(b.id)"
+                [ngClass]="b.isSelected ? 'cardGreen' : 'cardRed'"
+              >
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="row" style="margin: 0; padding: 0">
+                      <div class="col-xxl">
+                        <div
+                          style="
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                          "
+                          class="row"
+                        >
+                          <div class="col">
+                            <p
+                              style="
+                                font-size: small;
+                                padding-bottom: 0;
+                                margin-bottom: 5px;
+                              "
+                            >
+                              {{ b.name }}
+                            </p>
+                          </div>
                         </div>
-                                    <div style="text-align: left;" class="row" >
-                                        <div class="col">
-                                        <p style="font-size: small;" >$ {{b.priceinDollars}}</p>
-                                        </div>
-                                                </div>
-                                                
-                                              
-        </div>
-               </div>
-        
+                        <div style="text-align: left" class="row">
+                          <div class="col">
+                            <p style="font-size: small">
+                              $ {{ b.priceinDollars }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-        </div>
-        </div>
+                  </div>
                 </div>
-              
-        
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div style="padding-top: 15px" class="row">
+        <div
+          style="
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+            padding-top: 0.5em;
+            padding-left: 4vw;
+          "
+          class="col-3"
+        >
+          <span style="font-weight: 600">Select Sauce: </span>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div
+              style="
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+              "
+              class="col-sm-3 col-md-3"
+              *ngFor="let b of sauces"
+            >
+              <div
+                style="overflow: hidden; margin-bottom: 2vh; text-align: center"
+                (click)="changeOptionSauces(b.id)"
+                [ngClass]="b.isSelected ? 'cardGreen' : 'cardRed'"
+              >
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="row" style="margin: 0; padding: 0">
+                      <div class="col-xxl">
+                        <div
+                          style="
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                          "
+                          class="row"
+                        >
+                          <div class="col">
+                            <p
+                              style="
+                                font-size: small;
+                                padding-bottom: 0;
+                                margin-bottom: 5px;
+                              "
+                            >
+                              {{ b.name }}
+                            </p>
+                          </div>
+                        </div>
+                        <div style="text-align: left" class="row">
+                          <div class="col">
+                            <p style="font-size: small">
+                              $ {{ b.priceinDollars }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        
-        
-        
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" >
-            <div style="padding-top:15px;" class="row">
-                <div style="align-items: right;justify-content: right;text-align: left;padding-top:0.5em;padding-left:4vw;" class="col-3" >
-                    <span style="font-weight: 600;" >Select Sauce: </span>
-                </div>
-                <div class="col-9" >
-                    <div class="row">
-                        <div style="padding:0;margin:0;align-items: center;justify-content: center;" class=" col-sm-3 col-md-3" *ngFor="let b of sauces" >
-                <div style="overflow: hidden;margin-bottom:2vh;text-align: center;" (click)="changeOptionSauces(b.id)" [ngClass]="b.isSelected? 'cardGreen':'cardRed'">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div style="padding-top: 15px" class="row">
+        <div
+          style="
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+            padding-top: 0.5em;
+            padding-left: 4vw;
+          "
+          class="col-3"
+        >
+          <span style="font-weight: 600">Select Toppings: </span>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div
+              style="
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+              "
+              class="col-sm-3 col-md-3"
+              *ngFor="let b of toppings"
+            >
+              <div
+                style="overflow: hidden; margin-bottom: 2vh; text-align: center"
+                (click)="selectOptionToppings(b.id)"
+                [ngClass]="b.isSelected ? 'cardGreen' : 'cardRed'"
+              >
                 <div class="row">
-                    <div  class="col-sm-12">
-                       <div class="row" style="margin:0;padding:0;">
-                <div class="col-xxl" >
-                    <div style="text-align: left;padding-bottom:0;margin-bottom:0;" class="row" >
-                        <div class="col">
-                        <p style="font-size: small;padding-bottom:0;margin-bottom:5px;" >{{b.name}}</p>
+                  <div class="col-sm-12">
+                    <div class="row" style="margin: 0; padding: 0">
+                      <div class="col-xxl">
+                        <div
+                          style="
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                          "
+                          class="row"
+                        >
+                          <div class="col">
+                            <p
+                              style="
+                                font-size: small;
+                                padding-bottom: 0;
+                                margin-bottom: 5px;
+                              "
+                            >
+                              {{ b.name }}
+                            </p>
+                          </div>
                         </div>
-                                </div>
-                                            <div style="text-align: left;" class="row" >
-                                                <div class="col">
-                                                <p style="font-size: small;" >$ {{b.priceinDollars}}</p>
-                                                </div>
-                                                        </div>
-                                                        
-                                                      
-                </div>
-                       </div>
-                
-                            </div>
-                </div>
-                </div>
+                        <div style="text-align: left" class="row">
+                          <div class="col">
+                            <p style="font-size: small">
+                              $ {{ b.priceinDollars }}
+                            </p>
+                          </div>
                         </div>
-                      
-                
+                      </div>
                     </div>
+                  </div>
                 </div>
-                    </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" >
-            <div style="padding-top:15px;" class="row">
-                <div style="align-items: right;justify-content: right;text-align: left;padding-top:0.5em;padding-left:4vw;" class="col-3" >
-                    <span style="font-weight: 600;" >Select Toppings: </span>
-                </div>
-                <div class="col-9" >
-                    <div class="row">
-                        <div style="padding:0;margin:0;align-items: center;justify-content: center;" class=" col-sm-3 col-md-3" *ngFor="let b of toppings" >
-                <div style="overflow: hidden;margin-bottom:2vh;text-align: center;" (click)="selectOptionToppings(b.id)" [ngClass]="b.isSelected? 'cardGreen':'cardRed'">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div style="padding-top: 15px" class="row">
+        <div
+          style="
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+            padding-top: 0.5em;
+            padding-left: 4vw;
+          "
+          class="col-3"
+        >
+          <span style="font-weight: 600">Select Cheese Type: </span>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div
+              style="
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+              "
+              class="col-sm-3 col-md-3"
+              *ngFor="let b of cheese"
+            >
+              <div
+                style="overflow: hidden; margin-bottom: 2vh; text-align: center"
+                (click)="changeOptionsCheese(b.id)"
+                [ngClass]="b.isSelected ? 'cardGreen' : 'cardRed'"
+              >
                 <div class="row">
-                    <div  class="col-sm-12">
-                       <div class="row" style="margin:0;padding:0;">
-                <div class="col-xxl" >
-                    <div style="text-align: left;padding-bottom:0;margin-bottom:0;" class="row" >
-                        <div class="col">
-                        <p style="font-size: small;padding-bottom:0;margin-bottom:5px;" >{{b.name}}</p>
+                  <div class="col-sm-12">
+                    <div class="row" style="margin: 0; padding: 0">
+                      <div class="col-xxl">
+                        <div
+                          style="
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                          "
+                          class="row"
+                        >
+                          <div class="col">
+                            <p
+                              style="
+                                font-size: small;
+                                padding-bottom: 0;
+                                margin-bottom: 5px;
+                              "
+                            >
+                              {{ b.name }}
+                            </p>
+                          </div>
                         </div>
-                                </div>
-                                            <div style="text-align: left;" class="row" >
-                                                <div class="col">
-                                                <p style="font-size: small;" >$ {{b.priceinDollars}}</p>
-                                                </div>
-                                                        </div>
-                                                        
-                                                      
-                </div>
-                       </div>
-                
-                            </div>
-                </div>
-                </div>
+                        <div style="text-align: left" class="row">
+                          <div class="col">
+                            <p style="font-size: small">
+                              $ {{ b.priceinDollars }}
+                            </p>
+                          </div>
                         </div>
-                      
-                
+                      </div>
                     </div>
+                  </div>
                 </div>
-                    </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" >
-            <div style="padding-top:15px;" class="row">
-                <div style="align-items: right;justify-content: right;text-align: left;padding-top:0.5em;padding-left:4vw;" class="col-3" >
-                    <span style="font-weight: 600;" >Select Cheese: </span>
-                </div>
-                <div class="col-9" >
-                    <div class="row">
-                        <div style="padding:0;margin:0;align-items: center;justify-content: center;" class=" col-sm-3 col-md-3" *ngFor="let b of cheese" >
-                <div style="overflow: hidden;margin-bottom:2vh;text-align: center;" (click)="changeOptionsCheese(b.id)" [ngClass]="b.isSelected? 'cardGreen':'cardRed'">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div style="padding-top: 15px" class="row">
+        <div
+          style="
+            align-items: right;
+            justify-content: right;
+            text-align: left;
+            padding-top: 0.5em;
+            padding-left: 4vw;
+          "
+          class="col-3"
+        >
+          <span style="font-weight: 600">Select Size: </span>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div
+              style="
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+              "
+              class="col-sm-3 col-md-3"
+              *ngFor="let b of sizes"
+            >
+              <div
+                style="overflow: hidden; margin-bottom: 2vh; text-align: center"
+                (click)="changeOptionsSizes(b.id)"
+                [ngClass]="b.isSelected ? 'cardGreen' : 'cardRed'"
+              >
                 <div class="row">
-                    <div  class="col-sm-12">
-                       <div class="row" style="margin:0;padding:0;">
-                <div class="col-xxl" >
-                    <div style="text-align: left;padding-bottom:0;margin-bottom:0;" class="row" >
-                        <div class="col">
-                        <p style="font-size: small;padding-bottom:0;margin-bottom:5px;" >{{b.name}}</p>
+                  <div class="col-sm-12">
+                    <div class="row" style="margin: 0; padding: 0">
+                      <div class="col-xxl">
+                        <div
+                          style="
+                            text-align: left;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                          "
+                          class="row"
+                        >
+                          <div class="col">
+                            <p
+                              style="
+                                font-size: small;
+                                padding-bottom: 0;
+                                margin-bottom: 5px;
+                              "
+                            >
+                              {{ b.name }}
+                            </p>
+                          </div>
                         </div>
-                                </div>
-                                            <div style="text-align: left;" class="row" >
-                                                <div class="col">
-                                                <p style="font-size: small;" >$ {{b.priceinDollars}}</p>
-                                                </div>
-                                                        </div>
-                                                        
-                                                      
-                </div>
-                       </div>
-                
-                            </div>
-                </div>
-                </div>
+                        <div style="text-align: left" class="row">
+                          <div class="col">
+                            <p style="font-size: small">
+                              $ {{ b.priceinDollars }}
+                            </p>
+                          </div>
                         </div>
-                      
-                
+                      </div>
                     </div>
+                  </div>
                 </div>
-                    </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" >
-            <div style="padding-top:15px;" class="row">
-                <div style="align-items: right;justify-content: right;text-align: left;padding-top:0.5em;padding-left:4vw;" class="col-3" >
-                    <span style="font-weight: 600;" >Select Size: </span>
-                </div>
-                <div class="col-9" >
-                    <div class="row">
-                        <div style="padding:0;margin:0;align-items: center;justify-content: center;" class=" col-sm-3 col-md-3" *ngFor="let b of sizes" >
-                <div style="overflow: hidden;margin-bottom:2vh;text-align: center;" (click)="changeOptionsSizes(b.id)" [ngClass]="b.isSelected? 'cardGreen':'cardRed'">
-                <div class="row">
-                    <div  class="col-sm-12">
-                       <div class="row" style="margin:0;padding:0;">
-                <div class="col-xxl" >
-                    <div style="text-align: left;padding-bottom:0;margin-bottom:0;" class="row" >
-                        <div class="col">
-                        <p style="font-size: small;padding-bottom:0;margin-bottom:5px;" >{{b.name}}</p>
-                        </div>
-                                </div>
-                                            <div style="text-align: left;" class="row" >
-                                                <div class="col">
-                                                <p style="font-size: small;" >$ {{b.priceinDollars}}</p>
-                                                </div>
-                                                        </div>
-                                                        
-                                                      
-                </div>
-                       </div>
-                
-                            </div>
-                </div>
-                </div>
-                        </div>
-                      
-                
-                    </div>
-                </div>
-                    </div>
-        </div>
-        </div>
-        <div style="margin:1vh 1vw 1vh 1vw;" class="row" >
-<div class="col-3">
-
-</div>
-<div class="col-9" >
-    <div class="mybutton" >
+      </div>
+    </div>
+  </div>
+  <div style="margin: 1vh 1vw 1vh 1vw" class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <div class="mybutton">
         <p>ADD TO CART</p>
-        </div>
-</div>
-            
-        </div>
+      </div>
+    </div>
+  </div>
 </div>
